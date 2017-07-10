@@ -48,7 +48,6 @@ install:
     sudo make install
   - cd $HOMEDIR
   - sudo ldconfig
-  - cd ../..
   
   
 script:
