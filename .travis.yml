@@ -51,6 +51,7 @@ install:
   
   
 script:
+ - ${POCL_LLVM_CONFIG} --shared-mode
  - g++ -o clDeviceQuery clDeviceQuery.cpp -lOpenCL
  - ./clDeviceQuery
 
