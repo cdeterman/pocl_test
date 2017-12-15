@@ -43,7 +43,7 @@ install:
     cd pocl
     mkdir build
     cd build
-    cmake -DWITH_LLVM_CONFIG=${POCL_LLVM_CONFIG} ..
+    cmake -DENABLE_ICD=OFF -DWITH_LLVM_CONFIG=${POCL_LLVM_CONFIG} ..
     make
     sudo make install
   - cd $HOMEDIR
