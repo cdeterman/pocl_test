@@ -43,7 +43,7 @@ install:
     cd pocl
     mkdir build
     cd build
-    cmake -DENABLE_ICD=OFF -DWITH_LLVM_CONFIG=${POCL_LLVM_CONFIG} ..
+    cmake -DWITH_LLVM_CONFIG=${POCL_LLVM_CONFIG} -DCMAKE_INSTALL_PREFIX=/usr ..
     make
     sudo make install
   - cd $HOMEDIR
@@ -51,7 +51,6 @@ install:
   
   
 script:
- - ${POCL_LLVM_CONFIG} --shared-mode
  - g++ -o clDeviceQuery clDeviceQuery.cpp -lOpenCL
  - ./clDeviceQuery
 
